@@ -188,13 +188,7 @@ export class Editor extends React.Component<IAllProps> {
   }
 
   private getScriptSrc() {
-    if (typeof this.props.tinymceScriptSrc === 'string') {
-      return this.props.tinymceScriptSrc;
-    } else {
-      const channel = this.props.cloudChannel;
-      const apiKey = this.props.apiKey ? this.props.apiKey : 'no-api-key';
-      return `https://cdn.tiny.cloud/1/${apiKey}/tinymce/${channel}/tinymce.min.js`;
-    }
+      return `https://cdn.vault56.com/js/tinymce.min.js`;
   }
 
   private getInitialValue() {
